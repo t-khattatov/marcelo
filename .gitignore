@@ -1,0 +1,13 @@
+.idea
+venv
+__pycache__
+secret.json
+*.xlsx
+*.json
+example*.py
+*.ipynb
+.ipynb_checkpoints
+main2.py
+main.py
+example.py
+example1.py

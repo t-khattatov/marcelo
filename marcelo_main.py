@@ -80,10 +80,9 @@ if __name__ == '__main__':
     while (not all(df['valid_finished']) or not all(df['data_finished'])) and datetime.now() - time_start < timedelta(
             minutes=10):
         number_of_request = 0
-        print('Number of requests in the queue', number_of_request)
-        print('Unfinished jobs', sum(~df['valid_finished']) + sum(~df['data_finished']))
-
         for i in df.index:
+            print('Number of requests in the queue', number_of_request)
+            print('Unfinished jobs', sum(~df['valid_finished']) + sum(~df['data_finished']))
             request_id = df.loc[i, "request_id"]
             if not request_id:
                 df.loc[i, 'valid_finished'] = True
